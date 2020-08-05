@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>EunProject</display-name>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- member 에 관한 controller -->
+	<servlet>
+		<servlet-name>Member</servlet-name>
+		<servlet-class>com.controller.MemberController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Member</servlet-name>
+		<url-pattern>/join</url-pattern>
+		<url-pattern>/login</url-pattern>
+		<url-pattern>/logout</url-pattern>
+		<url-pattern>/idcheck</url-pattern>
+		<url-pattern>/nickcheck</url-pattern>
+	</servlet-mapping>
+	<!-- board 에 관한 controller -->
+	<servlet>
+		<servlet-name>Board</servlet-name>
+		<servlet-class>com.controller.BoardController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Board</servlet-name>
+		<url-pattern>/write</url-pattern>
+		<url-pattern>/list</url-pattern>
+		<url-pattern>/find</url-pattern>
+		<url-pattern>/delete</url-pattern>
+		<url-pattern>/update</url-pattern>
+		<url-pattern>/read</url-pattern>
+		
+	</servlet-mapping>
+</web-app>
